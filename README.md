@@ -13,8 +13,12 @@ Este projeto reúne uma coleção de scripts SQL desenvolvidos durante aulas e t
 - `Aula 3 - BD Relacional - Criar_Tabelas.sql`: Script para criação de tabelas em um banco de dados relacional em aula.
 - `Atividade1.sql`: Exercícios práticos sobre manipulação de dados.
 - `SQLQuery Atividade2.sql`: Exercícios práticos sobre manipulação de dados.
+- `Oracle/`: Exercícios práticos em ambiente Oracle.
+- `Oracle/Atividade1`: Praticando no ambiente Oracle, entendendo como funciona na prática. Transformando um modelo lógico manual para o software
 
 ## Tecnologias Utilizadas
 
 - SQL
 - SQL Server Management Studio
+- SQL Developer
+- SQL Database
