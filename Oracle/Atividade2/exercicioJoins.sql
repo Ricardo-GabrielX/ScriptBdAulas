@@ -46,11 +46,17 @@ SELECT
     g.ultimo_nome AS nome_gerente,
     g.idempregado AS id_gerente
 FROM empregado e
-LEFT JOIN empregado g ON g.idempregado = e.idgerente;
+INNER JOIN empregado g ON g.idempregado = e.idgerente;
 
 
 -- e) Modifique a consulta d para exibir todos os funcionários, inclusive os que 
 -- não possuem gerente.
 
--- Desenvolver o selects f usando a tabela Disciplina:
--- f) Selecionar nome da disciplina e nome da disciplina pre-requisito (se existir)
+SELECT 
+    e.ultimo_nome AS nome_funcionario,
+    e.idempregado,
+    g.ultimo_nome AS nome_gerente,
+    g.idempregado AS id_gerente
+FROM empregado e
+LEFT JOIN empregado g ON g.idempregado = e.idgerente;
+
