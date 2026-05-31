@@ -35,10 +35,18 @@ WHERE l.cidade = 'Santos';
 
 SELECT * FROM departamento;
 SELECT * FROM empregado;
+SELECT * FROM cargo1;
 
 -- d) Crie um relatório para exibir o sobrenome e o número dos funcionários, bem 
 -- como o sobrenome e o número dos respectivos gerentes.
 
+SELECT 
+    e.ultimo_nome AS nome_funcionario,
+    e.idempregado,
+    g.ultimo_nome AS nome_gerente,
+    g.idempregado AS id_gerente
+FROM empregado e
+LEFT JOIN empregado g ON g.idempregado = e.idgerente;
 
 
 -- e) Modifique a consulta d para exibir todos os funcionários, inclusive os que 
