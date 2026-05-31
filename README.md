@@ -15,10 +15,14 @@ Este projeto reúne uma coleção de scripts SQL desenvolvidos durante aulas e t
 - `SQLQuery Atividade2.sql`: Exercícios práticos sobre manipulação de dados.
 - `Oracle/`: Exercícios práticos em ambiente Oracle.
 - `Oracle/Atividade1`: Praticando no ambiente Oracle, entendendo como funciona na prática. Transformando um modelo lógico manual para o software
+- `Oracle/Atividade2`:
+    - `exercicioJoins.sql`: Diversas questões para treinar joins.
+    - `lista1.sql`: Praticando SELECT com group by, agregações, operações matemáticas. 
+- `Oracle/Atividade3`: Trabalhando desde a criação de tabelas a mudanças em registros, entendendo o comportamento de foreign keys ao alterar registros e boas práticas em escrever comandos SQL.
 
 ## Tecnologias Utilizadas
 
 - SQL
 - SQL Server Management Studio
-- SQL Developer
+- SQL Developer(Ambiente ORACLE)
 - SQL Database
