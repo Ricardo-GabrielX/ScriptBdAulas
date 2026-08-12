@@ -19,6 +19,7 @@ Este projeto reúne uma coleção de scripts SQL desenvolvidos durante aulas e t
     - `exercicioJoins.sql`: Diversas questões para treinar joins.
     - `lista1.sql`: Praticando SELECT com group by, agregações, operações matemáticas. 
 - `Oracle/Atividade3`: Trabalhando desde a criação de tabelas a mudanças em registros, entendendo o comportamento de foreign keys ao alterar registros e boas práticas em escrever comandos SQL.
+- `Oracle/Atividade4`: Exercícios de UNION, MINUS e INTERSECT com base de dados BIBLIOTECA.
 
 ## Tecnologias Utilizadas
 
