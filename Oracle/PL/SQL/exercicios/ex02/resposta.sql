@@ -1,4 +1,3 @@
-
 -- PDF 02: Inserir item
 
 CREATE OR REPLACE PROCEDURE Inserir_item(PnumPed number, Pcodprod number, Pquant number)
@@ -125,6 +124,8 @@ INSERT INTO tb_pedido VALUES( 16, '14-06-2020', 55, 25);
 -- referencial. Excluir um cliente mas antes testar se não existem pedidos
 -- para ele.
 
+alter table tab_erro modify mensagem varchar2(100);
+
 create or replace procedure excluir_cliente_FK (pcodcli number)
 as
     vtotal number;
@@ -161,4 +162,39 @@ exception
         não existe' || pcodcli);
     -- rollback;
 end;
+/
+
+
+
+
+
+-- Testando
+exec excluir_cliente_FK(31); -- testar com cliente que existe e
+-- tem pedidos e verificar na tabela de erros se o resultado é o
+-- esperado.(msg = 4)
+exec excluir_cliente_FK(123); -- testar com cliente que não existe (msg=2)
+select * from tab_erro;
+
+insert into tb_cliente values (40,'Maria','Rua x','Sorocaba', '12222-1','SP');
+exec excluir_cliente (40); -- testar com cliente que existe e não tem pedidos (msg =3)
+select * from tab_erro;
+
+SELECT  * FROM tb_cliente;
+-- C- Procedimento raise_application_error
+BEGIN
+    -- 1. Executa o DELETE dentro do bloco PL/SQL
+    DELETE FROM tb_cliente
+    WHERE codcliente = 31;
+
+    -- 2. Verifica se 0 linhas foram excluídas (observe a grafia SQL%ROWCOUNT)
+    IF SQL%ROWCOUNT = 0 THEN
+        -- Interrompe a execução e exibe o erro personalizado na tela
+        RAISE_APPLICATION_ERROR(
+            -20001,
+            'Cliente a ser excluído não existe'
+        );
+    END IF;
+
+    COMMIT;
+END;
 /
